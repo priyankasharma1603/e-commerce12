@@ -1,0 +1,742 @@
+@charset "UTF-8";
+
+body, html {
+height: 110%;
+width: 100%;
+margin: 0;
+background-image: url("images/shopsight.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: #ffffff;
+
+}
+
+#content{
+min-height: 100vh;
+}
+
+.navigation {
+
+height: 50px;
+
+
+}
+
+.brand {
+position: absolute;
+padding-left: 20px;
+float: left;
+line-height: 70px;
+font-size: 2em;
+
+}
+.brand a,
+.brand a:visited {
+color: #021f66;
+font-family: Georgia, serif;
+font-weight: 700;
+padding-left: -61px;
+text-decoration: none;
+
+
+}
+
+.nav-container {
+max-width: 1000px;
+margin-left: 60px;
+
+}
+
+nav {
+float: right;
+}
+nav ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+nav ul li {
+float: left;
+position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+display: block;
+padding: 0 20px;
+line-height: 70px;
+color: #060606;
+text-decoration: none;
+font-family: Georgia, serif;
+font-weight:550;
+}
+nav ul li a:hover,
+nav ul li a:visited:hover {
+background: radial-gradient(circle, rgba(63,202,251,1) 0%, rgba(70,242,252,0.03113066515668772) 100%);
+color: #070606;
+border:2px solid #0606060f;border-radius: 100px;
+margin-top: 10px;
+
+}
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+padding-left: 4px;
+content: " ▾";
+}
+nav ul li ul li {
+min-width: 190px;
+}
+nav ul li ul li a {
+padding: 15px;
+line-height: 20px;
+}
+
+.nav-dropdown {
+position: absolute;
+display: none;
+z-index: 1;
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile navigation */
+.nav-mobile {
+display: none;
+position: absolute;
+top: 0;
+right: 0;
+background: #262626;
+height: 70px;
+width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+.nav-mobile {
+  display: block;
+}
+
+nav {
+  width: 100%;
+  padding: 70px 0 15px;
+}
+nav ul {
+  display: none;
+}
+nav ul li {
+  float: none;
+}
+nav ul li a {
+  padding: 15px;
+  line-height: 20px;
+}
+nav ul li ul li a {
+  padding-left: 30px;
+}
+
+.nav-dropdown {
+  position: static;
+}
+}
+@media screen and (min-width: 799px) {
+.nav-list {
+  display: block !important;
+}
+}
+#nav-toggle {
+position: absolute;
+left: 18px;
+top: 22px;
+cursor: pointer;
+padding: 10px 35px 16px 0px;
+}
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+cursor: pointer;
+border-radius: 1px;
+height: 5px;
+width: 35px;
+background: #ffffff;
+position: absolute;
+display: block;
+content: "";
+transition: all 300ms ease-in-out;
+}
+#nav-toggle span:before {
+top: -10px;
+}
+#nav-toggle span:after {
+bottom: -10px;
+}
+#nav-toggle.active span {
+background-color: transparent;
+}
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+top: 0;
+}
+#nav-toggle.active span:before {
+transform: rotate(45deg);
+}
+#nav-toggle.active span:after {
+transform: rotate(-45deg);
+}
+
+#btn1{
+margin: 10px;
+text-align: right;
+float: right;
+position: absolute;
+z-index: 2;
+left: 80px;
+top: 5px;
+border: 2px solid rgba(0, 0, 0, 0.342);
+border-radius: 100px;
+background-color: #021f66;
+color: #ffffff;
+}
+#btn1:hover{
+background: radial-gradient(circle, rgba(245,24,80,1) 0%, rgba(70,242,252,0.03113066515668772) 100%);
+border: 2px solid rgba(0, 0, 0, 0.164);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+
+}
+#btn2{
+ color: #ffffff;
+ background-color: #021f66;
+ border-radius: 20px;
+ width: 250px;
+ border: 2px solid rgb(0, 0, 0);
+
+}
+#btn2:hover{
+    background:  radial-gradient(circle, rgba(245,24,80,1) 0%, rgba(70,242,252,0.03113066515668772) 100%);
+    border: 2px solid rgba(0, 0, 0, 0.17);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+
+ }
+
+.container {
+  width: 516px;
+  margin: 109px;
+  padding: 26px;
+  height: 500px;
+  text-align: center;
+  padding-top: 130px;
+}
+
+.dark-mode {
+background-color: rgba(0, 0, 0, 0.671);
+color: rgb(0, 0, 0);
+}
+.ml6 {
+position: relative;
+font-weight: 900;
+font-size: 3.3em;
+}
+
+.ml6 .text-wrapper {
+position: relative;
+display: inline-block;
+padding-top: 0.2em;
+padding-right: 0.05em;
+padding-bottom: 0.1em;
+overflow: hidden;
+}
+
+.ml6 .letter {
+display: inline-block;
+line-height: 1em;
+}
+
+#box {
+    width: 450px;
+    margin: 123px;
+    padding: -76px;
+    height: 600px;
+    text-align: center;
+    padding-top: 45px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 80px;
+    margin-left: 119px;
+    margin-top: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+}
+#box:hover{
+    background:radial-gradient(circle, rgb(79, 161, 255) 0%, rgb(255, 255, 255) 100%);
+}
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    background-image: url("images/shopsight\ dark\ mode.png");
+    color: rgb(255, 255, 255);
+  }
+
+  
+          
+          .form_container {
+              margin-top: 100px;
+          }
+  
+          .login_container {
+              padding: 0 2rem;
+          }
+          .input-group-text {
+              background: #021e66!important;
+              color: white !important;
+              border: 2px solid rgb(255, 255, 255) !important;
+              border-radius: 0.25rem 0 0 0.25rem !important;
+              margin-top: 5px;
+              margin-bottom: 5px;
+          }
+          .input_user,
+          .input_pass:focus {
+              box-shadow: none !important;
+              outline: 0px !important;
+          }
+          .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+              background-color: #c0392b !important;
+          }
+          .closing{
+              height: 104px;
+              width: 112Spx;
+              margin-top:36px;
+              background: transparent;
+               border: none;
+          }
+          .closing:hover{
+              -webkit-transition: 0.5s all;
+             -moz-transition: 0.5s all;
+             -o-transition: 0.5s all;
+              -ms-transition: 0.5s all;
+              transition: 0.5s all;
+              background :rgb(232, 255, 102);
+              border: 2px solid rgba(255, 255, 255, 0.986);
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+  
+          }
+  
+  /*-- main --*/
+  .main-w3layouts {
+    padding: 3em 0 1em;
+  }
+  
+  .main-agileinfo {
+    width: 35%;
+    margin: 3em auto;
+    background: rgba(0, 0, 0, 0);
+    background-size: cover;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: #000;
+  }
+  
+  .agileits-top {
+    padding: 3em;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    font-size: 0.9em;
+    color: #000000;
+    font-weight: 100;
+    width: 99.7%;
+    display: block;  border: none;
+    padding: 0.3em;
+    border: solid 2px rgba(0, 0, 0, 0.256);
+    -webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 96%, #ffffff 4%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #fff 4%);
+    background-position: -800px 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #000000;
+    font-family: "Georgia", sans-serif;
+    background: white;
+  }
+  
+  input.email,
+  input.text.w3lpass {
+    margin: 2em 0;
+  }
+  
+  .text:focus,
+  .text:valid {
+    box-shadow: none;
+    outline: none;
+    background-position: 0 0;
+  }
+  
+  .text:focus::-webkit-input-placeholder,
+  .text:valid::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.9em;
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    transform: translateY(-30px);
+    visibility: visible !important;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #000000;
+    font-weight: 200;
+    
+  }
+  
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+  }
+  
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+  }
+  
+  :-ms-input-placeholder {
+    color: #fff;
+  }
+  
+  input[type="submit"] {
+    font-size: 0.9em;
+    color: #ffffff;
+    background-color: #021f66;
+     border-radius: 20px;
+     width: 250px;
+     border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    border: 2px solid #000000;
+    cursor: pointer;
+    width: 90%;
+    height: 40px;
+    margin: 1.5em 0;
+    letter-spacing: 4px;
+    
+  }
+  
+  input[type="submit"]:hover {
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    background: radial-gradient(circle, rgba(245,24,80,1) 0%, rgba(70,242,252,0.03113066515668772) 100%);
+    border: 2px solid rgba(0, 0, 0, 0.37);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+  }
+  
+  /*-- responsive-design --*/
+  @media (max-width: 1440px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 94%;
+    }
+  }
+  
+  @media (max-width: 1366px) {
+    h1 {
+      font-size: 2.6em;
+    }
+  
+    .agileits-top {
+      padding: 2.5em;
+    }
+  
+    .main-agileinfo {
+      margin: 2em auto;
+    }
+  
+    .main-agileinfo {
+      width: 36%;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .main-agileinfo {
+      width: 40%;
+    }
+  }
+  
+  @media (max-width: 1080px) {
+    .main-agileinfo {
+      width: 46%;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .main-agileinfo {
+      width: 49%;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    h1 {
+      font-size: 2.4em;
+    }
+  
+    .main-w3layouts {
+      padding: 2em 0 1em;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .main-agileinfo {
+      width: 58%;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 93%;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    h1 {
+      font-size: 2.2em;
+    }
+  }
+  
+  @media (max-width: 736px) {
+    .main-agileinfo {
+      width: 62%;
+    }
+  }
+  
+  @media (max-width: 667px) {
+    .main-agileinfo {
+      width: 67%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .agileits-top {
+      padding: 2.2em;
+    }
+  
+    input.email,
+    input.text.w3lpass {
+      margin: 1.5em 0;
+    }
+  
+    input[type="submit"] {
+      margin: 2em 0;
+    }
+  
+    h1 {
+      font-size: 2em;
+      letter-spacing: 3px;
+    }
+  }
+  
+  @media (max-width: 568px) {
+    .main-agileinfo {
+      width: 75%;
+    }
+  
+    .colorlibcopy-agile p {
+      padding: 0 2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8em;
+      letter-spacing: 3px;
+    }
+  
+    .agileits-top {
+      padding: 1.8em;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 91%;
+    }
+  
+  .option{
+      width: 80%;
+  }
+  
+    .agileits-top p {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 414px) {
+    h1 {
+      font-size: 1.8em;
+      letter-spacing: 2px;
+    }
+  
+    .main-agileinfo {
+      width: 85%;
+      margin: 1.5em auto;
+    }
+  
+    .text:focus,
+    .text:valid {
+      background-position: 0 0px;
+    }
+  
+    .wthree-text ul li,
+    .wthree-text ul li:nth-child(2) {
+      display: block;
+      float: none;
+    }
+  
+    .wthree-text ul li:nth-child(2) {
+      margin-top: 1.5em;
+    }
+  
+    input[type="submit"] {
+      margin: 2em 0 1.5em;
+      letter-spacing: 3px;
+    }
+  
+    input[type="submit"] {
+      margin: 2em 0 1.5em;
+    }
+  
+    .colorlibcopy-agile {
+      margin: 1em 0 1em;
+    }
+  }
+  
+  @media (max-width: 384px) {
+    .main-agileinfo {
+      width: 88%;
+    }
+  
+    .colorlibcopy-agile p {
+      padding: 0 1em;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    .agileits-top p {
+      letter-spacing: 0px;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .main-w3layouts {
+      padding: 1.5em 0 0;
+    }
+  
+    .agileits-top {
+      padding: 1.2em;
+    }
+  
+    .colorlibcopy-agile {
+      margin: 0 0 1em;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 89.5%;
+      font-size: 0.85em;
+    }
+  
+    h1 {
+      font-size: 1.7em;
+      letter-spacing: 0px;
+    }
+  
+    .main-agileinfo {
+      width: 92%;
+      margin: 1em auto;
+    }
+  
+    .text:focus,
+    .text:valid {
+      background-position: 0 0px;
+    }
+  
+    input[type="submit"] {
+      margin: 1.5em 0;
+      padding: 0.8em;
+      font-size: 0.85em;
+    }
+  
+    .colorlibcopy-agile p {
+      font-size: 0.85em;
+    }
+  
+    .wthree-text label {
+      font-size: 0.85em;
+    }
+  
+    .main-w3layouts {
+      padding: 1em 0 0;
+    }
+  }
+  
+  .option {
+     
+      background: rgb(255, 255, 255);
+      position:relative;
+      width: 285px;
+      margin-top:25px;
+      height:35px;
+      font-family: georgia,serif;
+      font-size: 0.9em;
+      
+  }
+  #box2 {
+    width: 400px;
+    margin: 123px;
+    padding: -76px;
+    height: 535px;
+    text-align: center;
+    padding-top: 35px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 80px;
+    margin-left: 119px;
+    margin-top: 85px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+}
+#box2:hover{
+    background:radial-gradient(circle, rgb(79, 161, 255) 0%, rgb(255, 255, 255) 100%);
+}
+
+.form_container {
+    margin-top: 100px;
+}
+
+.login_container {
+    padding: 0 2rem;
+}
+.input-group-text {
+    background: #021e66!important;
+    color: white !important;
+    border: 2px solid rgb(255, 255, 255) !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.input_user,
+.input_pass:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #c0392b !important;
+}
+.closing{
+    height: 104px;
+    width: 112Spx;
+    margin-top:36px;
+    background: transparent;
+     border: none;
+}
+.closing:hover{
+    background :rgb(232, 255, 102);
+    border: 2px solid rgba(255, 255, 255, 0.986);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.151), 0 6px 20px 0 rgba(0, 0, 0, 0.485);
+
+}
